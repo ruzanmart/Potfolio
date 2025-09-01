@@ -1,0 +1,74 @@
+{
+  "articles": [
+    {
+      "slug": "motion-design-fundamentals",
+      "title": "Motion Design Fundamentals: Getting Started",
+      "category": "Basics",
+      "excerpt": "Learn the core principles of motion design including timing, easing, and visual hierarchy. This comprehensive guide covers everything beginners need to know to start creating compelling animations.",
+      "readMinutes": 7
+    },
+    {
+      "slug": "12-principles-animation-motion-graphics",
+      "title": "The 12 Principles of Animation in Motion Graphics",
+      "category": "Basics",
+      "excerpt": "Discover how Disney's classic animation principles apply to modern motion graphics. From squash and stretch to anticipation, learn how these timeless concepts enhance your work.",
+      "readMinutes": 8
+    },
+    {
+      "slug": "brand-identity-motion-design",
+      "title": "Creating Cohesive Brand Identity Through Motion",
+      "category": "Use cases",
+      "excerpt": "Explore how motion design strengthens brand identity across digital touchpoints. Learn strategies for maintaining consistency while creating memorable animated experiences.",
+      "readMinutes": 6
+    },
+    {
+      "slug": "explainer-videos-that-convert",
+      "title": "Designing Explainer Videos That Actually Convert",
+      "category": "Use cases",
+      "excerpt": "Master the art of creating explainer videos that drive results. From scriptwriting to visual storytelling, discover the secrets behind high-converting animated content.",
+      "readMinutes": 8
+    },
+    {
+      "slug": "social-media-motion-graphics-guide",
+      "title": "Motion Graphics for Social Media: Platform-Specific Guide",
+      "category": "Use cases",
+      "excerpt": "Optimize your animations for different social platforms. Learn the technical requirements, best practices, and creative strategies for Instagram, TikTok, and LinkedIn.",
+      "readMinutes": 6
+    },
+    {
+      "slug": "mp4-vs-gif-vs-lottie-comparison",
+      "title": "MP4 vs GIF vs Lottie: Choosing the Right Format",
+      "category": "Choosing format",
+      "excerpt": "Navigate the world of animation formats with confidence. Compare file sizes, quality, and use cases to make informed decisions for your motion design projects.",
+      "readMinutes": 5
+    },
+    {
+      "slug": "web-animation-performance-optimization",
+      "title": "Optimizing Web Animations for Performance",
+      "category": "Choosing format",
+      "excerpt": "Balance visual impact with loading speed in web animations. Learn compression techniques, format selection, and performance optimization strategies for better user experience.",
+      "readMinutes": 7
+    },
+    {
+      "slug": "client-feedback-motion-design-workflow",
+      "title": "Streamlining Client Feedback in Motion Design",
+      "category": "Workflow",
+      "excerpt": "Transform your client collaboration process with proven feedback strategies. Discover tools and techniques that reduce revisions and improve project satisfaction.",
+      "readMinutes": 6
+    },
+    {
+      "slug": "after-effects-cinema4d-integration",
+      "title": "After Effects + Cinema 4D: Seamless 3D Integration",
+      "category": "Tools",
+      "excerpt": "Master the powerful combination of After Effects and Cinema 4D for stunning 3D motion graphics. Learn workflow tips and integration techniques from industry professionals.",
+      "readMinutes": 8
+    },
+    {
+      "slug": "motion-design-trends-2024",
+      "title": "Motion Design Trends Shaping 2024",
+      "category": "Workflow",
+      "excerpt": "Stay ahead of the curve with the latest motion design trends. From AI-assisted animation to sustainable design practices, explore what's defining the industry this year.",
+      "readMinutes": 5
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "galleryItems": [
+    {
+      "id": "explainer-1",
+      "title": "Ottawa University Educational Video",
+      "category": "Explainer",
+      "tags": ["Education", "University", "Academic"],
+      "shortDescription": "Educational explainer video showcasing Ottawa University's programs and campus life for prospective students.",
+      "thumbnailUrl": "/media/gallery-explainer-video/OttawaUniversity.webp"
+    },
+    {
+      "id": "explainer-2", 
+      "title": "Reena Foundation Impact Story",
+      "category": "Explainer",
+      "tags": ["Non-profit", "Foundation", "Social Impact"],
+      "shortDescription": "Compelling explainer video highlighting the Reena Foundation's mission and impact in supporting individuals with developmental disabilities.",
+      "thumbnailUrl": "/media/gallery-explainer-video/ReenaFoundation.webp"
+    },
+    {
+      "id": "explainer-3",
+      "title": "MarketUP Business Solution",
+      "category": "Explainer", 
+      "tags": ["Business", "Marketing", "Solution"],
+      "shortDescription": "Dynamic explainer video demonstrating how MarketUP helps businesses grow through innovative marketing strategies and tools.",
+      "thumbnailUrl": "/media/gallery-explainer-video/MarketUP.webp"
+    },
+    {
+      "id": "explainer-4",
+      "title": "Starway 2.0 Platform Overview",
+      "category": "Explainer",
+      "tags": ["Technology", "Platform", "Innovation"],
+      "shortDescription": "Comprehensive explainer video introducing Starway 2.0's advanced features and benefits for modern businesses.",
+      "thumbnailUrl": "/media/gallery-explainer-video/Starway2.0.webp"
+    },
+    {
+      "id": "ui-1",
+      "title": "Hypervisu App Interface",
+      "category": "App Animation",
+      "tags": ["Mobile UI", "Banking", "Fintech"],
+      "shortDescription": "The Hypervisu App animation shows how easy it is to manage a smart home from lighting and climate to security, all in one convenient interface.",
+      "videoUrl": "https://vimeo.com/1007709496",
+      "thumbnailUrl": "/media/gallery-app-animation/HypervisuApp.webp"
+    },
+    {
+      "id": "ui-2",
+      "title": "Beeline Care App Animation",
+      "category": "App Animation",
+      "tags": ["Healthcare", "Mobile App", "User Care"],
+      "shortDescription": "Beeline Care App helps users take care of their health with easy online support. The animation highlights its key features consultations, reminders, and quick access to services.",
+      "videoUrl": "https://vimeo.com/903014977",
+      "thumbnailUrl": "/media/gallery-app-animation/BeelineApp copy.webp"
+    },
+    {
+      "id": "ui-3",
+      "title": "Flower Shop App Animation",
+      "category": "App Animation",
+      "tags": ["E-commerce", "Flowers", "Mobile"],
+      "shortDescription": "Online Flowershop App the animation shows how easy it is to choose a bouquet and place an order through the application. The user sees the entire process from selecting flowers to delivery.",
+      "videoUrl": "https://vimeo.com/1111788889",
+      "thumbnailUrl": "/media/gallery-app-animation/FlowerApp.webp"
+    },
+    {
+      "id": "branding-2",
+      "title": "Animation for Sourcepass IT Company",
+      "category": "Branding",
+      "tags": ["Fintech", "Startup", "Financial"],
+      "shortDescription": "Dynamic brand animation package for innovative IT technology company.",
+      "thumbnailUrl": "/media/branding/Sourcepass.webp"
+    },
+    {
+      "id": "branding-3",
+      "title": "Animation for Sales and Marketing Strategy Company",
+      "category": "Branding",
+      "tags": ["Eco-Friendly", "Sustainability", "Green"],
+      "shortDescription": "Sustainable brand identity with animated elements emphasizing environmental responsibility and green values.",
+      "thumbnailUrl": "/media/branding/Armenita.webp"
+    },
+    {
+      "id": "branding-4",
+      "title": "Branding Animation for Real Estate Company",
+      "category": "Branding",
+      "tags": ["Fashion", "Luxury", "Rebrand"],
+      "shortDescription": "A concise brand animation that clearly shows how the company saves clients money, shortens deal cycles, and makes financing transparent step-by-step flow, clean iconography, and a clear call to action.",
+      "videoUrl": "https://vimeo.com/1111485157",
+      "thumbnailUrl": "/media/branding/Atlas.webp"
+    },
+    {
+      "id": "branding-5",
+      "title": "Branding Animation for Convertus Company",
+      "category": "Branding",
+      "tags": ["Minimal", "Startup", "Clean"],
+      "shortDescription": "A concise brand animation that explains the cycle \"waste → sorting → processing → new resources/energy.\"",
+      "videoUrl": "https://vimeo.com/1085869676",
+      "thumbnailUrl": "/media/branding/Conversus.png"
+    },
+    {
+      "id": "branding-6",
+      "title": "Branding Animation for Aurora Company",
+      "category": "Branding",
+      "tags": ["Corporate", "Guidelines", "Motion"],
+      "shortDescription": "A concise brand animation that shows how the Aurora initiative turns support into real impact: grants and partnerships deliver medical care, water, education, and safe shelter to people in crisis.",
+      "videoUrl": "https://vimeo.com/553688315",
+      "thumbnailUrl": "/media/branding/Aurora.webp"
+    },
+    {
+      "id": "branding-1",
+      "title": "PhishGuard — Branding Animation (Anti-Phishing)",
+      "category": "Branding",
+      "tags": ["Healthcare", "Medical", "Brand Identity"],
+      "shortDescription": "A clear brand animation that teaches employees to spot phishing spoofed domains, look-alike logos, urgent wording, suspicious links/attachments.",
+      "videoUrl": "https://vimeo.com/861979012",
+      "thumbnailUrl": "/media/branding/Phishing.webp"
+    },
+    {
+      "id": "ui-4",
+      "title": "Elaupro App Animation",
+      "category": "App Animation",
+      "tags": ["Mobile App", "UI/UX", "Simplicity"],
+      "shortDescription": "Elaupro App  the animation demonstrates how easy and effective it is to use the application. Smooth transitions highlight its quality and main advantage  simplicity in use.",
+      "videoUrl": "https://vimeo.com/1111792513",
+      "thumbnailUrl": "/media/gallery-app-animation/ElauproApp.webp"
+    },
+    {
+      "id": "logo-5",
+      "title": "EducLogo Animation",
+      "category": "Logo",
+      "tags": ["Education", "Logo Animation", "Learning"],
+      "shortDescription": "Educational brand logo animation with smooth transitions and modern typography for learning platform.",
+      "thumbnailUrl": "/media/gallery-logo-animation/EducLogo.webp"
+    },
+    {
+      "id": "logo-6",
+      "title": "Esthetica Logo Animation",
+      "category": "Logo",
+      "tags": ["Beauty", "Esthetica", "Elegant"],
+      "shortDescription": "Elegant logo animation for beauty and wellness brand with sophisticated visual effects.",
+      "thumbnailUrl": "/media/gallery-logo-animation/EstheticaLogo.webp"
+    },
+    {
+      "id": "logo-7",
+      "title": "Immaculate Logo Animation",
+      "category": "Logo",
+      "tags": ["Clean", "Immaculate", "Professional"],
+      "shortDescription": "Clean and professional logo animation emphasizing precision and attention to detail.",
+      "thumbnailUrl": "/media/gallery-logo-animation/ImmaculateLogo.webp"
+    },
+    {
+      "id": "logo-8",
+      "title": "SimplerWays Logo Animation",
+      "category": "Logo",
+      "tags": ["Simple", "Ways", "Minimalist"],
+      "shortDescription": "Minimalist logo animation showcasing simplicity and clarity in brand communication.",
+      "thumbnailUrl": "/media/gallery-logo-animation/SimplerWaysLogo.webp"
+    }
+  ]
+}
