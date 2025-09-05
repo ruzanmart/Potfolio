@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, ArrowRight, CheckCircle, Upload, Home } from 'lucide-react';
+import { ArrowLeft, ArrowRight, CheckCircle, Upload } from 'lucide-react';
 
 interface BriefFormData {
   // Step 1: Basic info
@@ -30,6 +30,21 @@ interface BriefFormData {
   comments: string;
 }
 
+interface BriefFormErrors {
+  name?: string;
+  email?: string;
+  company?: string;
+  projectType?: string;
+  goals?: string;
+  otherGoal?: string;
+  audience?: string;
+  references?: string;
+  stylePreference?: string;
+  budget?: string;
+  deadline?: string;
+  comments?: string;
+}
+
 const Brief: React.FC = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -47,7 +62,7 @@ const Brief: React.FC = () => {
     deadline: '',
     comments: ''
   });
-  const [errors, setErrors] = useState<Partial<BriefFormData>>({});
+  const [errors, setErrors] = useState<BriefFormErrors>({});
 
   const totalSteps = 7;
 
@@ -97,7 +112,7 @@ const Brief: React.FC = () => {
   ];
 
   const validateStep = (step: number): boolean => {
-    const newErrors: Partial<BriefFormData> = {};
+    const newErrors: BriefFormErrors = {};
 
     if (step === 1) {
       if (!formData.name.trim()) {
@@ -118,13 +133,13 @@ const Brief: React.FC = () => {
 
     if (step === 3) {
       if (formData.goals.length === 0) {
-        newErrors.goals = ['Please select at least one goal'] as any;
+        newErrors.goals = 'Please select at least one goal';
       }
     }
 
     if (step === 4) {
       if (formData.audience.length === 0) {
-        newErrors.audience = ['Please select at least one audience'] as any;
+        newErrors.audience = 'Please select at least one audience';
       }
     }
 
@@ -204,28 +219,27 @@ const Brief: React.FC = () => {
             <div className="flex justify-center mb-6">
               <Link
                 to="/motion-designer-website"
-                className="inline-flex items-center text-gray-300 hover:text-white transition-colors duration-200"
+                className="inline-flex items-center text-gray-200 hover:text-white transition-colors duration-200 absolute top-8 left-8"
               >
-                <Home className="h-5 w-5 mr-2" />
-                Back to Homepage
+                <ArrowLeft className="h-6 w-6" />
               </Link>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Project Brief
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Let's bring your vision to life together
             </p>
           </div>
         </section>
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="bg-white rounded-2xl shadow-xl p-8 lg:p-12 text-center">
+          <div className="bg-primary-bg rounded-2xl shadow-xl p-8 lg:p-12 text-center">
             <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-6" />
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold text-primary-text mb-4">
               Thank you, {formData.name}!
             </h2>
-            <p className="text-lg text-gray-600 mb-6">
+            <p className="text-lg text-secondary-text mb-6">
               I'll review your brief and get back to you within 24 hours.
             </p>
             <p className="text-gray-500 mb-8">
@@ -233,7 +247,7 @@ const Brief: React.FC = () => {
             </p>
             <button
               onClick={resetForm}
-              className="bg-[#ff6f61] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#e55a4d] transition-colors duration-200"
+              className="bg-[accent] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[accent/90] transition-colors duration-200"
             >
               Submit Another Brief
             </button>
@@ -251,30 +265,29 @@ const Brief: React.FC = () => {
           <div className="flex justify-center mb-6">
             <Link
               to="/motion-designer-website"
-              className="inline-flex items-center text-gray-300 hover:text-white transition-colors duration-200"
+              className="inline-flex items-center text-gray-200 hover:text-white transition-colors duration-200 absolute top-8 left-8"
             >
-              <Home className="h-5 w-5 mr-2" />
-              Back to Homepage
+              <ArrowLeft className="h-6 w-6" />
             </Link>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Project Brief
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
             Fill out this short questionnaire so I can understand your project and prepare the right proposal.
           </p>
         </div>
       </section>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="bg-white rounded-2xl shadow-xl p-8 lg:p-12">
+        <div className="bg-primary-bg rounded-2xl shadow-xl p-8 lg:p-12">
           {/* Progress Indicator */}
           <div className="mb-8">
             <div className="flex items-center justify-between mb-4">
               <span className="text-sm font-medium text-gray-500">
                 Step {currentStep} of {totalSteps}
               </span>
-              <span className="text-sm font-medium text-[#ff6f61]">
+              <span className="text-sm font-medium text-[accent]">
                 {currentStep === 1 && 'Basic Information'}
                 {currentStep === 2 && 'Project Type'}
                 {currentStep === 3 && 'Goals'}
@@ -286,7 +299,7 @@ const Brief: React.FC = () => {
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">
               <div 
-                className="bg-[#ff6f61] h-2 rounded-full transition-all duration-300"
+                className="bg-[accent] h-2 rounded-full transition-all duration-300"
                 style={{ width: `${(currentStep / totalSteps) * 100}%` }}
               />
             </div>
@@ -295,7 +308,7 @@ const Brief: React.FC = () => {
           {/* Step 1: Basic Information */}
           {currentStep === 1 && (
             <div className="space-y-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl font-bold text-primary-text mb-6">
                 Basic Information
               </h2>
 
@@ -308,7 +321,7 @@ const Brief: React.FC = () => {
                   id="name"
                   value={formData.name}
                   onChange={(e) => handleInputChange('name', e.target.value)}
-                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#ff6f61] focus:border-transparent ${
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[accent] focus:border-transparent ${
                     errors.name ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="Your full name"
@@ -327,7 +340,7 @@ const Brief: React.FC = () => {
                   id="email"
                   value={formData.email}
                   onChange={(e) => handleInputChange('email', e.target.value)}
-                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#ff6f61] focus:border-transparent ${
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[accent] focus:border-transparent ${
                     errors.email ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="your@email.com"
@@ -346,7 +359,7 @@ const Brief: React.FC = () => {
                   id="company"
                   value={formData.company}
                   onChange={(e) => handleInputChange('company', e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ff6f61] focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[accent] focus:border-transparent"
                   placeholder="Your company or website (optional)"
                 />
               </div>
@@ -354,7 +367,7 @@ const Brief: React.FC = () => {
               <div className="flex justify-end">
                 <button
                   onClick={handleNext}
-                  className="bg-[#ff6f61] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#e55a4d] transition-colors duration-200 flex items-center focus:outline-none focus:ring-2 focus:ring-[#ff6f61] focus:ring-offset-2"
+                  className="bg-[accent] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[accent/90] transition-colors duration-200 flex items-center focus:outline-none focus:ring-2 focus:ring-[accent] focus:ring-offset-2"
                 >
                   Next Step
                   <ArrowRight className="h-5 w-5 ml-2" />
@@ -366,7 +379,7 @@ const Brief: React.FC = () => {
           {/* Step 2: Project Type */}
           {currentStep === 2 && (
             <div className="space-y-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl font-bold text-primary-text mb-6">
                 Project Type
               </h2>
 
@@ -383,7 +396,7 @@ const Brief: React.FC = () => {
                         value={type}
                         checked={formData.projectType === type}
                         onChange={(e) => handleInputChange('projectType', e.target.value)}
-                        className="h-4 w-4 text-[#ff6f61] focus:ring-[#ff6f61] border-gray-300"
+                        className="h-4 w-4 text-[accent] focus:ring-[accent] border-gray-300"
                       />
                       <span className="ml-3 text-gray-700">{type}</span>
                     </label>
@@ -404,7 +417,7 @@ const Brief: React.FC = () => {
                 </button>
                 <button
                   onClick={handleNext}
-                  className="bg-[#ff6f61] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#e55a4d] transition-colors duration-200 flex items-center focus:outline-none focus:ring-2 focus:ring-[#ff6f61] focus:ring-offset-2"
+                  className="bg-[accent] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[accent/90] transition-colors duration-200 flex items-center focus:outline-none focus:ring-2 focus:ring-[accent] focus:ring-offset-2"
                 >
                   Next Step
                   <ArrowRight className="h-5 w-5 ml-2" />
@@ -416,7 +429,7 @@ const Brief: React.FC = () => {
           {/* Step 3: Goals */}
           {currentStep === 3 && (
             <div className="space-y-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl font-bold text-primary-text mb-6">
                 Project Goals
               </h2>
 
@@ -431,7 +444,7 @@ const Brief: React.FC = () => {
                         type="checkbox"
                         checked={formData.goals.includes(goal)}
                         onChange={() => handleCheckboxChange('goals', goal)}
-                        className="h-4 w-4 text-[#ff6f61] focus:ring-[#ff6f61] border-gray-300 rounded"
+                        className="h-4 w-4 text-[accent] focus:ring-[accent] border-gray-300 rounded"
                       />
                       <span className="ml-3 text-gray-700">{goal}</span>
                     </label>
@@ -443,7 +456,7 @@ const Brief: React.FC = () => {
                       type="text"
                       value={formData.otherGoal}
                       onChange={(e) => handleInputChange('otherGoal', e.target.value)}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ff6f61] focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[accent] focus:border-transparent"
                       placeholder="Please specify..."
                     />
                   </div>
@@ -463,7 +476,7 @@ const Brief: React.FC = () => {
                 </button>
                 <button
                   onClick={handleNext}
-                  className="bg-[#ff6f61] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#e55a4d] transition-colors duration-200 flex items-center focus:outline-none focus:ring-2 focus:ring-[#ff6f61] focus:ring-offset-2"
+                  className="bg-[accent] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[accent/90] transition-colors duration-200 flex items-center focus:outline-none focus:ring-2 focus:ring-[accent] focus:ring-offset-2"
                 >
                   Next Step
                   <ArrowRight className="h-5 w-5 ml-2" />
@@ -475,7 +488,7 @@ const Brief: React.FC = () => {
           {/* Step 4: Target Audience */}
           {currentStep === 4 && (
             <div className="space-y-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl font-bold text-primary-text mb-6">
                 Target Audience
               </h2>
 
@@ -490,7 +503,7 @@ const Brief: React.FC = () => {
                         type="checkbox"
                         checked={formData.audience.includes(audience)}
                         onChange={() => handleCheckboxChange('audience', audience)}
-                        className="h-4 w-4 text-[#ff6f61] focus:ring-[#ff6f61] border-gray-300 rounded"
+                        className="h-4 w-4 text-[accent] focus:ring-[accent] border-gray-300 rounded"
                       />
                       <span className="ml-3 text-gray-700">{audience}</span>
                     </label>
@@ -511,7 +524,7 @@ const Brief: React.FC = () => {
                 </button>
                 <button
                   onClick={handleNext}
-                  className="bg-[#ff6f61] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#e55a4d] transition-colors duration-200 flex items-center focus:outline-none focus:ring-2 focus:ring-[#ff6f61] focus:ring-offset-2"
+                  className="bg-[accent] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[accent/90] transition-colors duration-200 flex items-center focus:outline-none focus:ring-2 focus:ring-[accent] focus:ring-offset-2"
                 >
                   Next Step
                   <ArrowRight className="h-5 w-5 ml-2" />
@@ -523,7 +536,7 @@ const Brief: React.FC = () => {
           {/* Step 5: Style & References */}
           {currentStep === 5 && (
             <div className="space-y-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl font-bold text-primary-text mb-6">
                 Style & References
               </h2>
 
@@ -537,7 +550,7 @@ const Brief: React.FC = () => {
                     id="references"
                     value={formData.references}
                     onChange={(e) => handleInputChange('references', e.target.value)}
-                    className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ff6f61] focus:border-transparent"
+                    className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[accent] focus:border-transparent"
                     placeholder="Paste links to references or inspiration..."
                   />
                   <Upload className="absolute right-3 top-3 h-6 w-6 text-gray-400" />
@@ -555,7 +568,7 @@ const Brief: React.FC = () => {
                   id="stylePreference"
                   value={formData.stylePreference}
                   onChange={(e) => handleInputChange('stylePreference', e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ff6f61] focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[accent] focus:border-transparent"
                 >
                   <option value="">Select a style...</option>
                   {styleOptions.map((style) => (
@@ -574,7 +587,7 @@ const Brief: React.FC = () => {
                 </button>
                 <button
                   onClick={handleNext}
-                  className="bg-[#ff6f61] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#e55a4d] transition-colors duration-200 flex items-center focus:outline-none focus:ring-2 focus:ring-[#ff6f61] focus:ring-offset-2"
+                  className="bg-[accent] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[accent/90] transition-colors duration-200 flex items-center focus:outline-none focus:ring-2 focus:ring-[accent] focus:ring-offset-2"
                 >
                   Next Step
                   <ArrowRight className="h-5 w-5 ml-2" />
@@ -586,7 +599,7 @@ const Brief: React.FC = () => {
           {/* Step 6: Budget & Timeline */}
           {currentStep === 6 && (
             <div className="space-y-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl font-bold text-primary-text mb-6">
                 Budget & Timeline
               </h2>
 
@@ -603,7 +616,7 @@ const Brief: React.FC = () => {
                         value={range}
                         checked={formData.budget === range}
                         onChange={(e) => handleInputChange('budget', e.target.value)}
-                        className="h-4 w-4 text-[#ff6f61] focus:ring-[#ff6f61] border-gray-300"
+                        className="h-4 w-4 text-[accent] focus:ring-[accent] border-gray-300"
                       />
                       <span className="ml-3 text-gray-700">{range}</span>
                     </label>
@@ -627,7 +640,7 @@ const Brief: React.FC = () => {
                         value={deadline}
                         checked={formData.deadline === deadline}
                         onChange={(e) => handleInputChange('deadline', e.target.value)}
-                        className="h-4 w-4 text-[#ff6f61] focus:ring-[#ff6f61] border-gray-300"
+                        className="h-4 w-4 text-[accent] focus:ring-[accent] border-gray-300"
                       />
                       <span className="ml-3 text-gray-700">{deadline}</span>
                     </label>
@@ -648,7 +661,7 @@ const Brief: React.FC = () => {
                 </button>
                 <button
                   onClick={handleNext}
-                  className="bg-[#ff6f61] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#e55a4d] transition-colors duration-200 flex items-center focus:outline-none focus:ring-2 focus:ring-[#ff6f61] focus:ring-offset-2"
+                  className="bg-[accent] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[accent/90] transition-colors duration-200 flex items-center focus:outline-none focus:ring-2 focus:ring-[accent] focus:ring-offset-2"
                 >
                   Next Step
                   <ArrowRight className="h-5 w-5 ml-2" />
@@ -660,7 +673,7 @@ const Brief: React.FC = () => {
           {/* Step 7: Additional Details */}
           {currentStep === 7 && (
             <div className="space-y-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl font-bold text-primary-text mb-6">
                 Additional Details
               </h2>
 
@@ -673,7 +686,7 @@ const Brief: React.FC = () => {
                   rows={6}
                   value={formData.comments}
                   onChange={(e) => handleInputChange('comments', e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ff6f61] focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[accent] focus:border-transparent"
                   placeholder="Any additional details, specific requirements, or questions you'd like to share..."
                 />
               </div>
@@ -688,7 +701,7 @@ const Brief: React.FC = () => {
                 </button>
                 <button
                   onClick={handleSubmit}
-                  className="bg-[#ff6f61] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#e55a4d] transition-colors duration-200 flex items-center focus:outline-none focus:ring-2 focus:ring-[#ff6f61] focus:ring-offset-2"
+                  className="bg-[accent] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[accent/90] transition-colors duration-200 flex items-center focus:outline-none focus:ring-2 focus:ring-[accent] focus:ring-offset-2"
                 >
                   <CheckCircle className="h-5 w-5 mr-2" />
                   Send Brief

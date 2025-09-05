@@ -27,7 +27,7 @@ export default function Header() {
         <div className="flex justify-between items-center py-6">
           {/* Logo */}
           <div className="flex items-center space-x-4">
-            <Link to="/" className="flex items-center text-gray-600 hover:text-[#ff6f61] transition-colors duration-200">
+            <Link to="/" className="flex items-center text-gray-600 hover:text-[accent] transition-colors duration-200">
               <Home className="h-5 w-5" />
             </Link>
             <Link to="/" className="flex items-center gap-2 font-semibold">
@@ -43,8 +43,8 @@ export default function Header() {
                 to={item.href}
                 className={`text-sm font-medium transition-colors duration-200 ${
                   isActive(item.href)
-                    ? 'text-[#ff6f61]'
-                    : 'text-gray-700 hover:text-[#ff6f61]'
+                    ? 'text-[accent]'
+                    : 'text-gray-700 hover:text-[accent]'
                 }`}
               >
                 {item.name}
@@ -56,7 +56,7 @@ export default function Header() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-[#ff6f61] focus:outline-none focus:ring-2 focus:ring-[#ff6f61] focus:ring-offset-2 rounded-md p-2"
+              className="text-gray-700 hover:text-[accent] focus:outline-none focus:ring-2 focus:ring-[accent] focus:ring-offset-2 rounded-md p-2"
             >
               {isMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -74,7 +74,7 @@ export default function Header() {
               <Link
                 to="/"
                 onClick={() => setIsMenuOpen(false)}
-                className="flex items-center px-3 py-2 text-base font-medium text-gray-700 hover:text-[#ff6f61] hover:bg-gray-50 transition-colors duration-200"
+                className="flex items-center px-3 py-2 text-base font-medium text-gray-700 hover:text-[accent] hover:bg-gray-50 transition-colors duration-200"
               >
                 <Home className="h-5 w-5 mr-2" />
                 Main Menu
@@ -86,8 +86,8 @@ export default function Header() {
                   onClick={() => setIsMenuOpen(false)}
                   className={`block px-3 py-2 text-base font-medium transition-colors duration-200 ${
                     isActive(item.href)
-                      ? 'text-[#ff6f61] bg-gray-50'
-                      : 'text-gray-700 hover:text-[#ff6f61] hover:bg-gray-50'
+                      ? 'text-[accent] bg-gray-50'
+                      : 'text-gray-700 hover:text-[accent] hover:bg-gray-50'
                   }`}
                 >
                   {item.name}

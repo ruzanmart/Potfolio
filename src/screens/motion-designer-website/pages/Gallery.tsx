@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { Play, ExternalLink, Home } from 'lucide-react';
+import { Play, ExternalLink, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Lightbox from '../components/Lightbox';
 import galleryData from '../../../data/galleryItems.json';
@@ -61,21 +61,20 @@ export default function Gallery() {
     );
   };
   return (
-    <div className="bg-white min-h-screen py-16">
+    <div className="bg-primary-bg min-h-screen py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="flex justify-center mb-6">
             <Link
               to="/motion-designer-website"
-              className="inline-flex items-center text-gray-600 hover:text-[#ff6f61] transition-colors duration-200"
+              className="inline-flex items-center text-secondary-text hover:text-accent transition-colors duration-200 absolute top-8 left-8"
             >
-              <Home className="h-5 w-5 mr-2" />
-              Back to Homepage
+              <ArrowLeft className="h-6 w-6" />
             </Link>
           </div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">My Work</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h1 className="text-4xl font-bold text-primary-text mb-4">My Work</h1>
+          <p className="text-xl text-secondary-text max-w-3xl mx-auto">
             A collection of motion design projects showcasing creativity, technical skill, and storytelling
           </p>
         </div>
@@ -86,10 +85,10 @@ export default function Gallery() {
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-2 rounded-full border transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#ff6f61] focus:ring-offset-2 ${
+              className={`px-6 py-2 rounded-full border transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 ${
                 selectedCategory === category
-                  ? 'bg-[#ff6f61] text-white border-[#ff6f61] font-semibold'
-                  : 'border-gray-300 text-gray-700 hover:border-[#ff6f61] hover:text-[#ff6f61]'
+                  ? 'bg-accent text-white border-accent font-semibold'
+                  : 'border-secondary-text text-primary-text hover:border-accent hover:text-accent'
               }`}
             >
               {category}
@@ -191,7 +190,7 @@ export default function Gallery() {
                           openLightbox(index);
                         }
                       }}
-                      className="p-3 bg-[#ff6f61] text-white rounded-full hover:bg-[#e55a4d] transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-[#ff6f61] focus:ring-opacity-50"
+                      className="p-3 bg-accent text-white rounded-full hover:bg-accent/90 transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-accent focus:ring-opacity-50"
                       aria-label={`Watch ${project.title} video`}
                     >
                       <Play className="h-5 w-5" />
@@ -236,7 +235,7 @@ export default function Gallery() {
                           openLightbox(index);
                         }
                       }}
-                      className="p-3 bg-white text-gray-900 rounded-full hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-gray-300 focus:ring-opacity-50"
+                      className="p-3 bg-white text-primary-text rounded-full hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-gray-300 focus:ring-opacity-50"
                       aria-label={`View ${project.title} details`}
                     >
                       <ExternalLink className="h-5 w-5" />
@@ -246,9 +245,9 @@ export default function Gallery() {
               </div>
               
               <div className="p-6">
-                <div className="text-sm text-[#ff6f61] font-medium mb-2">{project.category}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{project.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{project.description}</p>
+                <div className="text-sm text-accent font-medium mb-2">{project.category}</div>
+                <h3 className="text-xl font-semibold text-primary-text mb-2">{project.title}</h3>
+                <p className="text-secondary-text text-sm leading-relaxed">{project.description}</p>
               </div>
             </div>
           ))}
@@ -256,11 +255,11 @@ export default function Gallery() {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Like What You See?</h2>
-          <p className="text-gray-600 mb-8">Let's create something amazing together</p>
+          <h2 className="text-2xl font-bold text-primary-text mb-4">Like What You See?</h2>
+          <p className="text-secondary-text mb-8">Let's create something amazing together</p>
           <Link
             to="/motion-designer-website/contact"
-            className="inline-block bg-[#ff6f61] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#e55a4d] transition-colors duration-200"
+            className="inline-block bg-accent text-white px-8 py-3 rounded-lg font-semibold hover:bg-accent/90 transition-colors duration-200"
           >
             Start a Project
           </Link>
