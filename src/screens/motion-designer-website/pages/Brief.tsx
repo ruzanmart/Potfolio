@@ -212,29 +212,29 @@ const Brief: React.FC = () => {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-page">
         {/* Header */}
-        <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-20">
+        <section className="bg-hero text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="flex justify-center mb-6">
               <Link
                 to="/motion-designer-website"
-                className="inline-flex items-center text-gray-200 hover:text-white transition-colors duration-200 absolute top-8 left-8"
+                className="inline-flex items-center text-text-hero hover:text-white transition-colors duration-200 absolute top-8 left-8"
               >
                 <ArrowLeft className="h-6 w-6" />
               </Link>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-hero-title">
               Project Brief
             </h1>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <p className="text-xl text-hero-sub max-w-3xl mx-auto">
               Let's bring your vision to life together
             </p>
           </div>
         </section>
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="bg-primary-bg rounded-2xl shadow-xl p-8 lg:p-12 text-center">
+          <div className="bg-page rounded-2xl shadow-xl p-8 lg:p-12 text-center">
             <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-6" />
             <h2 className="text-3xl font-bold text-primary-text mb-4">
               Thank you, {formData.name}!
@@ -258,29 +258,29 @@ const Brief: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-page">
       {/* Header */}
-      <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-20">
+      <section className="bg-hero text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex justify-center mb-6">
             <Link
               to="/motion-designer-website"
-              className="inline-flex items-center text-gray-200 hover:text-white transition-colors duration-200 absolute top-8 left-8"
+              className="inline-flex items-center text-text-hero hover:text-white transition-colors duration-200 absolute top-8 left-8"
             >
               <ArrowLeft className="h-6 w-6" />
             </Link>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-hero-title">
             Project Brief
           </h1>
-          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+          <p className="text-xl max-w-3xl mx-auto text-hero-sub">
             Fill out this short questionnaire so I can understand your project and prepare the right proposal.
           </p>
         </div>
       </section>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="bg-primary-bg rounded-2xl shadow-xl p-8 lg:p-12">
+        <div className="bg-page rounded-2xl shadow-xl p-8 lg:p-12">
           {/* Progress Indicator */}
           <div className="mb-8">
             <div className="flex items-center justify-between mb-4">
@@ -410,7 +410,7 @@ const Brief: React.FC = () => {
               <div className="flex justify-between">
                 <button
                   onClick={handleBack}
-                  className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors duration-200 flex items-center focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2"
+                  className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-primary-bg transition-colors duration-200 flex items-center focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2"
                 >
                   <ArrowLeft className="h-5 w-5 mr-2" />
                   Back
@@ -469,7 +469,7 @@ const Brief: React.FC = () => {
               <div className="flex justify-between">
                 <button
                   onClick={handleBack}
-                  className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors duration-200 flex items-center focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2"
+                  className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-primary-bg transition-colors duration-200 flex items-center focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2"
                 >
                   <ArrowLeft className="h-5 w-5 mr-2" />
                   Back
@@ -517,7 +517,7 @@ const Brief: React.FC = () => {
               <div className="flex justify-between">
                 <button
                   onClick={handleBack}
-                  className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors duration-200 flex items-center focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2"
+                  className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-primary-bg transition-colors duration-200 flex items-center focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2"
                 >
                   <ArrowLeft className="h-5 w-5 mr-2" />
                   Back
@@ -580,7 +580,7 @@ const Brief: React.FC = () => {
               <div className="flex justify-between">
                 <button
                   onClick={handleBack}
-                  className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors duration-200 flex items-center focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2"
+                  className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-primary-bg transition-colors duration-200 flex items-center focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2"
                 >
                   <ArrowLeft className="h-5 w-5 mr-2" />
                   Back
@@ -654,7 +654,7 @@ const Brief: React.FC = () => {
               <div className="flex justify-between">
                 <button
                   onClick={handleBack}
-                  className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors duration-200 flex items-center focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2"
+                  className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-primary-bg transition-colors duration-200 flex items-center focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2"
                 >
                   <ArrowLeft className="h-5 w-5 mr-2" />
                   Back
@@ -694,7 +694,7 @@ const Brief: React.FC = () => {
               <div className="flex justify-between">
                 <button
                   onClick={handleBack}
-                  className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors duration-200 flex items-center focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2"
+                  className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-primary-bg transition-colors duration-200 flex items-center focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2"
                 >
                   <ArrowLeft className="h-5 w-5 mr-2" />
                   Back

@@ -16,7 +16,10 @@ export default function Header() {
 
   const isActive = (href: string) => {
     if (href === '/motion-designer-website') {
-      return location.pathname === '/motion-designer-website' || location.pathname === '/motion-designer-website/';
+      return (
+        location.pathname === '/motion-designer-website' ||
+        location.pathname === '/motion-designer-website/'
+      );
     }
     return location.pathname === href;
   };
@@ -27,11 +30,15 @@ export default function Header() {
         <div className="flex justify-between items-center py-6">
           {/* Logo */}
           <div className="flex items-center space-x-4">
-            <Link to="/" className="flex items-center text-gray-600 hover:text-[accent] transition-colors duration-200">
-              <Home className="h-5 w-5" />
-            </Link>
-            <Link to="/" className="flex items-center gap-2 font-semibold">
-              <span className="text-xl font-bold tracking-tight">RM</span>
+            <Link
+              to="/motion-designer-website"
+              className="flex items-center gap-2 font-semibold"
+            >
+              <img
+                src="/fill.svg"   // логотип из public
+                alt="RM Logo"
+                className="h-6 w-auto"
+              />
             </Link>
           </div>
 
@@ -71,14 +78,6 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-200">
-              <Link
-                to="/"
-                onClick={() => setIsMenuOpen(false)}
-                className="flex items-center px-3 py-2 text-base font-medium text-gray-700 hover:text-[accent] hover:bg-gray-50 transition-colors duration-200"
-              >
-                <Home className="h-5 w-5 mr-2" />
-                Main Menu
-              </Link>
               {navigation.map((item) => (
                 <Link
                   key={item.name}

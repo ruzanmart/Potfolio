@@ -68,23 +68,23 @@ export default function Contact() {
   ];
 
   return (
-    <div className="bg-primary-bg min-h-screen">
+    <div className="bg-page min-h-screen">
       {/* Header */}
-      <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-20">
+      <section className="bg-hero text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex justify-center mb-6">
             <Link
               to="/motion-designer-website"
-              className="inline-flex items-center text-gray-200 hover:text-white transition-colors duration-200 absolute top-8 left-8"
+              className="inline-flex items-center text-text-hero hover:text-white transition-colors duration-200 absolute top-8 left-8"
             >
               <ArrowLeft className="h-6 w-6" />
             </Link>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-hero-title">
             Let's Create Something
-            <span className="block text-[accent]">Amazing Together</span>
+            <span className="block text-hero-title">Amazing Together</span>
           </h1>
-          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+          <p className="text-xl max-w-3xl mx-auto text-hero-sub">
             Ready to bring your vision to life? I'd love to hear about your project and discuss how we can work together.
           </p>
         </div>
@@ -102,7 +102,7 @@ export default function Contact() {
                 return (
                   <div key={index} className="flex items-start space-x-4">
                     <div className="flex-shrink-0">
-                      <div className="p-3 bg-[accent] rounded-lg">
+                      <div className="p-3 rounded-lg" style={{backgroundColor: '#759242'}}>
                         <IconComponent className="h-5 w-5 text-white" />
                       </div>
                     </div>

@@ -7,16 +7,20 @@ module.exports = {
         sans: ["Montserrat", "Helvetica", "Arial", "sans-serif"],
       },
       colors: {
-        'bg': '#0C2123',        // фон футера
-        'hero': '#2B616D',      // фон hero
-        'page': '#FDFFFF',      // фон секций
+        'bg': '#212517',        // фон футера
+        'hero': '#212517',      // фон hero
+        'page': '#F2F2EF',      // фон секций
         'text': '#0C2123',      // текст основной
-        'text-2': '#618587',    // второстепенный текст
-        'hero-title': '#B2DBD5',   // главный заголовок в hero
-        'hero-sub': '#FDFFFF',     // подзаголовки / описание
-        'accent': '#FA8D62',    // CTA кнопка
-        'accent-2': '#2E6D6F',  // outline/hover
-        'stroke': '#CFE3E1',    // границы
+        'text-2': '#2B616D',    // второстепенный текст
+        'hero-title': '#DED3A6',   // главный заголовок в hero
+        'hero-sub': '#F2F2EF',     // подзаголовки / описание
+        'accent': '#759242',    // CTA кнопка
+        'accent-2': '#759242',  // outline/hover
+        'stroke': '#759242',    // границы
+        'primary-text': '#0C2123',  // primary text for gallery
+        'secondary-text': '#2B616D', // secondary text for gallery
+        'primary-bg': '#FDFFFF',     // primary background
+        'text-hero': '#618587',      // hero text color for about
       },
     },
   },

@@ -57,22 +57,22 @@ const About: React.FC = () => {
 
 
   return (
-    <div className="bg-primary-bg min-h-screen">
+    <div className="bg-page min-h-screen">
       {/* Header */}
-      <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-20">
+      <section className="bg-hero text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex justify-center mb-6">
             <Link
               to="/motion-designer-website"
-              className="inline-flex items-center text-gray-200 hover:text-white transition-colors duration-200 absolute top-8 left-8"
+              className="inline-flex items-center text-text-hero hover:text-white transition-colors duration-200 absolute top-8 left-8"
             >
               <ArrowLeft className="h-6 w-6" />
             </Link>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-hero-title">
             About Me
           </h1>
-          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+          <p className="text-xl max-w-3xl mx-auto text-hero-sub">
             Passionate motion designer creating compelling visual stories
           </p>
         </div>
