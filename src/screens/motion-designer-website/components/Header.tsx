@@ -1,27 +1,22 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Home } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
   const navigation = [
-    { name: 'Home', href: '/motion-designer-website' },
-    { name: 'Gallery', href: '/motion-designer-website/gallery' },
-    { name: 'About', href: '/motion-designer-website/about' },
-    { name: 'Brief', href: '/motion-designer-website/brief' },
-    { name: 'Contact', href: '/motion-designer-website/contact' },
+    { name: 'Home', href: '/' },
+    { name: 'Gallery', href: '/gallery' },
+    { name: 'About', href: '/about' },
+    { name: 'Brief', href: '/brief' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   const isActive = (href: string) => {
-    if (href === '/motion-designer-website') {
-      return (
-        location.pathname === '/motion-designer-website' ||
-        location.pathname === '/motion-designer-website/'
-      );
-    }
-    return location.pathname === href;
+    if (href === '/') return location.pathname === '/';
+    return location.pathname.startsWith(href);
   };
 
   return (
@@ -30,15 +25,8 @@ export default function Header() {
         <div className="flex justify-between items-center py-6">
           {/* Logo */}
           <div className="flex items-center space-x-4">
-            <Link
-              to="/motion-designer-website"
-              className="flex items-center gap-2 font-semibold"
-            >
-              <img
-                src="/fill.svg"   // логотип из public
-                alt="RM Logo"
-                className="h-6 w-auto"
-              />
+            <Link to="/" className="flex items-center gap-2 font-semibold">
+              <img src="/fill.svg" alt="RM Logo" className="h-6 w-auto" />
             </Link>
           </div>
 
@@ -50,8 +38,8 @@ export default function Header() {
                 to={item.href}
                 className={`text-sm font-medium transition-colors duration-200 ${
                   isActive(item.href)
-                    ? 'text-[accent]'
-                    : 'text-gray-700 hover:text-[accent]'
+                    ? 'text-[var(--accent)]'
+                    : 'text-gray-700 hover:text-[var(--accent)]'
                 }`}
               >
                 {item.name}
@@ -63,13 +51,9 @@ export default function Header() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-[accent] focus:outline-none focus:ring-2 focus:ring-[accent] focus:ring-offset-2 rounded-md p-2"
+              className="text-gray-700 hover:text-[var(--accent)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-offset-2 rounded-md p-2"
             >
-              {isMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
@@ -85,8 +69,8 @@ export default function Header() {
                   onClick={() => setIsMenuOpen(false)}
                   className={`block px-3 py-2 text-base font-medium transition-colors duration-200 ${
                     isActive(item.href)
-                      ? 'text-[accent] bg-gray-50'
-                      : 'text-gray-700 hover:text-[accent] hover:bg-gray-50'
+                      ? 'text-[var(--accent)] bg-gray-50'
+                      : 'text-gray-700 hover:text-[var(--accent)] hover:bg-gray-50'
                   }`}
                 >
                   {item.name}
