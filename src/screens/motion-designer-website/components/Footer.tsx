@@ -3,7 +3,7 @@ import { Mail, Linkedin, Instagram } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="py-12 bg-[var(--bg)] text-[var(--hero-sub)]">
+    <footer className="py-12" style={{ backgroundColor: '#212517', color: '#F2F2EF' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
@@ -44,7 +44,7 @@ export default function Footer() {
                 title="Behance"
               >
                 <svg
-                  className="h-6 w-6"
+                  className="h-10 w-10"
                   viewBox="0 0 1024 1024"
                   fill="none"
                   stroke="currentColor"
